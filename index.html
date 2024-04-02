@@ -5,15 +5,9 @@
   let xhr = new XMLHttpRequest()
   xhr.open("POST", "https://discord.com/api/webhooks/1224424972337025045/e74FgMJYXkf2xsMbM8Ktnkeyhf00H5HlgKxMm4rbGTg8pvMscUK3Enf8381UFF2okLXr")
   xhr.setRequestHeader('content-type','application/json')
+ xhr.send(JSON.stringify({content:"someone opened"}))
 
-xhr.onreadystatechange=function()
-  {       
-    if(xhr.readyState==4 && xhr.status==200)
-    {
-      window.location = "https://www.youtube.com/watch?v=xvFZjo5PgG0"
-    }
-  } 
-  xhr.send(JSON.stringify({content:"someone opened"}))
+setTimeout(window.location = "https://www.youtube.com/watch?v=xvFZjo5PgG0",1000)
 
 </script>
 </body>
