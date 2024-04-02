@@ -7,7 +7,13 @@
   xhr.setRequestHeader('content-type','application/json')
   xhr.send(JSON.stringify({content:"someone opened"}))
 
-  window.location = "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+xhr.onreadystatechange=function()
+  {       
+    if(xhr.readyState==4 && xhr.status==200)
+    {
+      window.location = "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+    }
+  } 
 </script>
 </body>
 </html>
